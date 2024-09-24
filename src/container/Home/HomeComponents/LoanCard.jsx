@@ -3,7 +3,7 @@ import React from 'react'
 
 const LoanCard = () => {
     return (
-        <div className='border-[#572E9133] border-[0.5px] rounded-[4px] mb-6 relative '>
+        <div className=' rounded-[4px] mb-6 relative border-[0.5px] border-[#572E9133] '>
             <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-t-yellow-400 border-l-[40px] border-l-transparent"></div>
             <div className='bg-[#E9D9FF33] p-4'>
                 <h3 className='font-semibold text-2xl mr-8'>Dennis 
