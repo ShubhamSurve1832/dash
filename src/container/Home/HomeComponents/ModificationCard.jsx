@@ -7,15 +7,15 @@ const ModificationCard = () => {
             <div className='bg-[#E9D9FF33] p-4'>
                 <h3 className='font-semibold text-2xl mr-8'>Joyce 
                 Anderson</h3>
-                <span className='text-[#00000080] mt-2'>Id: 254</span>
+                <span className='text-[#00000080] mt-2 text-sm'>Id: 254</span>
             </div>
             <div className='p-4 bg-[#FFFFFF] pb-0'>
                 <div className='my-2'>
-                    <div className='flex justify-between items-center py-4'>
+                    <div className='flex justify-between items-center pb-4'>
                         <p className='text-[#000000B2] text-base'>Downpayment</p>
                     </div>
                     <div className='flex justify-between items-center py-4'>
-                        <p className='text-[#000000B2] text-base font-semibold'>Decreased to $2,500</p>
+                        <p className='text-[#000000B2] text-base font-semibold'>Decreased to $380</p>
                     </div>
                 </div>
             </div>

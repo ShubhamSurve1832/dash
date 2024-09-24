@@ -8,7 +8,7 @@ const OpenCard = () => {
             <div className='bg-[#E9D9FF33] p-4'>
                 <h3 className='font-semibold text-2xl mr-8'>Christopher
                     Smith</h3>
-                <span className='text-[#00000080] mt-2'>Id: 252</span>
+                <span className='text-[#00000080] mt-2 text-sm'>Id: 252</span>
             </div>
             <div className='p-4 bg-[#FFFFFF] pb-0'>
                 <div className='bg-[#FC24691A] p-2 rounded-[4px] flex gap-2 items-center w-max'>

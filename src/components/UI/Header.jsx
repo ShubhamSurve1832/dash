@@ -14,11 +14,11 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import Link from 'next/link';
 import { NAVIGATION } from '@/config/constants';
 
-export const NotificationNumbers = ({className, children}) => {
+export const NotificationNumbers = ({ className, children }) => {
     return (
-        <div className='flex justify-center items-center w-4 h-4 gap-2 absolute top-0 right-0'>
-            <div className={`bg-[#FF0000] p-1 rounded-full ${className}`}> {children} </div>
-        </div>
+
+        <div className={` text-white flex justify-center items-center gap-2 absolute top-2 left-6 p-1 rounded-full w-[16px] h-[16px] text-[9px] ${className}`}> {children} </div>
+
     )
 }
 
@@ -37,7 +37,7 @@ const Header = () => {
                         return (
                             <>
                                 <Form onSubmit={handleSubmit} className='relative'>
-                                    <FormikForm.Input name="search" placeholder="Search by ID, First Name, or Last Name" inlineStyle='w-[21rem]' styles='pl-9 p-3' />
+                                    <FormikForm.Input name="search" placeholder="Search by ID, First Name, or Last Name" inlineStyle='w-[21rem]' styles='pl-9 p-3 rounded-xl' />
                                     <div className='absolute left-3 top-4'>
                                         <SearchIcon />
                                     </div>
@@ -48,21 +48,22 @@ const Header = () => {
                 </Formik >
             </div>
             <div className='flex justify-between gap-7 items-center'>
-                <div className='nav-rounded-btn !p-4 relative'>
+                <div className='nav-rounded-btn !p-4 '>
                     <BulletedList />
-                    <NotificationNumbers >
-                        3
-                    </NotificationNumbers>
+
                 </div>
                 <div className='flex justify-between items-center gap-3'>
-                    <div className='nav-rounded-btn'>
+                    <div className='nav-rounded-btn relative'>
                         <ChatIcon />
+                        <NotificationNumbers className='bg-[#5D6FFD]'>3</NotificationNumbers>
                     </div>
-                    <div className='nav-rounded-btn'>
+                    <div className='nav-rounded-btn relative'>
                         <WarningIcon />
+                        <NotificationNumbers className='bg-[#EC675E]'>13</NotificationNumbers>
                     </div>
-                    <div className='nav-rounded-btn'>
+                    <div className='nav-rounded-btn relative'>
                         <BellIcon />
+                        <NotificationNumbers className='bg-[#FBBC05]'>3</NotificationNumbers>
                     </div>
                     <div className='nav-rounded-btn flex items-center'>
                         <Menu>

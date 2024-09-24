@@ -8,7 +8,7 @@ const PaymentFailuerCard = () => {
                 <h3 className='font-semibold text-2xl mr-8'>Peter <br />
                     Thompson
                 </h3>
-                <span className='text-[#00000080] mt-2'>Id: 256</span>
+                <span className='text-[#00000080] mt-2 text-sm'>Id: 256</span>
             </div>
             <div className='p-4 bg-[#FFFFFF] '>
                 <div className='flex items-center gap-3'>
