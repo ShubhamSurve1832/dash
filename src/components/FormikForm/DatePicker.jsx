@@ -41,7 +41,7 @@ const DatePicker = (props) => {
     <div className={`${inlineStyle}`}>
       {
         label && <label
-            className="block text-base font-semibold text-[#150C0B] mb-2 "
+            className="block text-base font-semibold text-[#150C0B] mb-2 tracking-[1px]"
         >
           {label}
         </label>

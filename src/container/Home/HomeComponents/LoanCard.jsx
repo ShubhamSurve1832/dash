@@ -21,7 +21,7 @@ const LoanCard = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between text-[#00000066] p-4 bg-[#0000000D]'>
+            <div className='flex justify-between text-[#00000066] p-3 bg-[#0000000D] text-sm'>
                 <p>Apr 12</p>
                 <p>14:27 PM</p>
             </div>

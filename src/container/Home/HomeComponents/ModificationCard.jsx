@@ -11,7 +11,7 @@ const ModificationCard = () => {
             </div>
             <div className='p-4 bg-[#FFFFFF] pb-0'>
                 <div className='my-2'>
-                    <div className='flex justify-between items-center pb-4'>
+                    <div className='flex justify-between items-center'>
                         <p className='text-[#000000B2] text-base'>Downpayment</p>
                     </div>
                     <div className='flex justify-between items-center py-4'>
@@ -19,7 +19,7 @@ const ModificationCard = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between text-[#00000066] p-4 bg-[#0000000D]'>
+            <div className='flex justify-between text-[#00000066] p-3 bg-[#0000000D] text-sm'>
                 <p>Apr 12</p>
                 <p>14:27 PM</p>
             </div>

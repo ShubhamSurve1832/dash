@@ -29,7 +29,7 @@ const Select = (props) => {
                 label &&
                 <label
                     htmlFor={name + '-id'}
-                    className="block text-base font-semibold text-[#150C0B] mb-2"
+                    className="block text-base font-semibold text-[#150C0B] mb-2 tracking-[1px]"
                 >
                     {label}
                     {required && <span className="text-red-600 ml-1">*</span>}
