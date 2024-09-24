@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, } from "@headlessui/react";
 import DownArrow from '@/images/icons/DownArrow';
 import { Form, Formik } from 'formik';
@@ -7,6 +7,11 @@ import { employmentVals} from '../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 
 const EmploymentTab = () => {
+    const [initialValues, setInitialValues] = useState(employmentVals);
+
+    useEffect(() => {
+        setInitialValues( {employer: "Software Solutions ",occupation: "Software Engineer",employmentType: "W2/Full time",hourlyPay: "$ 43.5",hoursPerWeek: "40",biWeeklyIncome: "$ 3,480",monthlyIncome: "$ 7,540",annualIncome: "$ 90,480",employmentStartDate: "",employmentDurationYears: "",employmentDurationMonths: "",residentType: "",residentDuration: "",rentAmount: "$2,000",yourShareOfRent: "$500",numberOfPeopleOnLease: "",additionalPeopleOnRent: "",sort:""})
+    }, [])
     return (
         <div className='p-4 bg-[#fff] rounded-[4px] mt-4'>
             <Disclosure
@@ -24,7 +29,7 @@ const EmploymentTab = () => {
                 <DisclosurePanel className="pt-5 pb-7">
                     <div>
                         <Formik
-                            initialValues={employmentVals}
+                            initialValues={initialValues}
                             // validationSchema={profileValidationSchema}
                             // onSubmit={onSubmit}
                             enableReinitialize>

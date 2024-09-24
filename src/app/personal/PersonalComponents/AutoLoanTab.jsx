@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, } from "@headlessui/react";
 import DownArrow from '@/images/icons/DownArrow';
 import { Form, Formik } from 'formik';
@@ -8,6 +8,11 @@ import { FormikForm } from '@/components/FormikForm';
 
 const AutoLoanTab = () => {
 
+    const [initialValues, setInitialValues] = useState(autoLoanVals);
+
+    useEffect(() => {
+        setInitialValues({ requestedMonthlyPayment: "", requestedDownPayment: "", interestRate: "", loanTermMonths: "",  remainingLoanBalance: "$ 6,040", monthlyPayment: "$ 300 ", remainingNumberOfPayments: "26", currentInterestRate: "7", vin: "", licensePlate: "", year: "", make: "", model: "", trim: "", currentMiles: "", notesOnCarCondition: "",carMikes:"", uploadVIN:"",uploadDamages:""})
+    }, [])
 
     return (
         <div className='p-4 bg-[#fff] rounded-[4px] mt-4'>
@@ -26,7 +31,7 @@ const AutoLoanTab = () => {
                 <DisclosurePanel className="pt-5 pb-7">
                     <div>
                         <Formik
-                            initialValues={autoLoanVals}
+                            initialValues={initialValues}
                             // validationSchema={profileValidationSchema}
                             // onSubmit={onSubmit}
                             enableReinitialize>
@@ -34,20 +39,19 @@ const AutoLoanTab = () => {
                                 <Form onSubmit={handleSubmit}>
                                     <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Desired Loan Terms</h3>
                                     <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
-                                        <FormikForm.Input name="employer" placeholder='Enter your employer name' label='Requested Monthly Payment' styles='placeholder-[#00000066]  placeholder-sm' />
-                                        <FormikForm.Input name="occupation" placeholder='Enter your occupation' label='Requested Down Payment' styles='placeholder-[#00000066]  placeholder-sm' />
-                                        <FormikForm.Input name="employmentType" placeholder='Enter interest rate' label='Interest Rate' styles='placeholder-[#00000066]  placeholder-sm' />
-                                        <FormikForm.Input name="hourlyPay" placeholder='Enter your loan term in months' label='Loan Term (Months)' styles='placeholder-[#00000066]  placeholder-sm' />
-                                    </div>
+                                        <FormikForm.Input name="requestedMonthlyPayment" placeholder='Enter requested monthly payment' label='Requested Monthly Payment' styles='placeholder-[#00000066]  placeholder-sm' />
+                                        <FormikForm.Input name="requestedDownPayment" placeholder='Enter request down payment' label='Requested Down Payment' styles='placeholder-[#00000066]  placeholder-sm' />
+                                        <FormikForm.Input name="interestRate" placeholder='Enter interest rate' label='Interest Rate' styles='placeholder-[#00000066]  placeholder-sm' />
+                                        <FormikForm.Input name="loanTermMonths" placeholder='Enter your loan term in months' label='Loan Term (Months)' styles='placeholder-[#00000066]  placeholder-sm' />
+                                    </div>  
 
                                     <div className='mt-11'>
                                         <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Current Loan Terms</h3>
-                                        <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
-                                            <FormikForm.Input name="ssn" placeholder='Enter your employer name' label='FICO Score' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="ssn" placeholder='' label='Remaining Loan Balance' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="rentAmount" placeholder='' label='Monthly Payment' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="ssn" placeholder='' label='Remaining Number of Payments' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="ssn" placeholder='' label='Current Interest Rate' styles='placeholder-[#00000066]  placeholder-sm' />
+                                        <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>                                            
+                                            <FormikForm.Input name="remainingLoanBalance" placeholder='' label='Remaining Loan Balance' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input name="monthlyPayment" placeholder='' label='Monthly Payment' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input name="remainingNumberOfPayments" placeholder='' label='Remaining Number of Payments' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input name="currentInterestRate" placeholder='' label='Current Interest Rate' styles='placeholder-[#00000066]  placeholder-sm' />
                                         </div>
                                     </div>
 

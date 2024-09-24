@@ -9,6 +9,7 @@ import VehicleSelectionTab from './PersonalComponents/VehicleSelectionTab';
 import LoanOptionTab from './PersonalComponents/LoanOptionTab';
 import FinalChecklistTab from './PersonalComponents/FinalChecklistTab';
 import NotificationModal from '@/components/UI/NotificationModal';
+import GreenChecked from '@/images/icons/GreenChecked';
 
 
 const page = () => {
@@ -16,8 +17,9 @@ const page = () => {
         <div className='persnal-tabs'>
             {/* LEFT SIDE TABS */}
             <div className='sideBar rounded-[4px]'>
-                <div className='asideTabs'>
+                <div className='asideTabs bg-[#28A8200D]'>
                     <p>Personal</p>
+                    <GreenChecked className='w-5 h-5'/>
                 </div>
                 <div className='asideTabs'>
                     <p>Employment &
@@ -45,21 +47,21 @@ const page = () => {
                                 <MenuButton className={`capitalize 2xl:text-lg text-base desktop flex items-center gap-2 bg-[#FFFFFF1A] rounded-[10px] font-medium`}>
                                     <HistoryClockIcon />
                                 </MenuButton>
-                               
-                                    <MenuItems
-                                        transition
-                                        anchor="bottom end"
-                                        className={`2xl:text-lg text-base p-8 desktop  bg-[#fff] !top-28 !bottom-8 w-[30rem] origin-top-right rounded-xl !right-16 !left-auto shadow-lg transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 z-[9999] hidden-scroller`}
-                                    >
 
-                                        <MenuItem>
-                                            {/* <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[hover]:bg-[#ffffff8f] data-[focus]:bg-white/10">
+                                <MenuItems
+                                    transition
+                                    anchor="bottom end"
+                                    className={`2xl:text-lg text-base p-8 desktop  bg-[#fff] !top-28 !bottom-8 w-[30rem] origin-top-right rounded-xl !right-16 !left-auto shadow-lg transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 z-[9999] hidden-scroller`}
+                                >
+
+                                    <MenuItem>
+                                        {/* <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[hover]:bg-[#ffffff8f] data-[focus]:bg-white/10">
                                             
                                         </button> */}
 
-                                            <NotificationModal />
-                                        </MenuItem>
-                                    </MenuItems>
+                                        <NotificationModal />
+                                    </MenuItem>
+                                </MenuItems>
                             </Menu>
 
                         </div>

@@ -41,10 +41,12 @@ input , select{outline: none;}
 .btn-Primary{border: 1px solid #572E91;display: flex;align-items: center;justify-content: center;line-height: 1.5;--tw-text-opacity: 1;color: #572E91;transition-duration: .1s;transition-timing-function: cubic-bezier(.4, 0, .2, 1);}
 .react-datepicker-wrapper{width: 100%;}
 .nav-rounded-btn{@apply border border-[#00000033] rounded-xl p-3 }
-.persnal-tabs{@apply grid gap-4 mt-4; grid-template-columns: 25% auto;}
+.persnal-tabs{@apply grid gap-4 mt-4; grid-template-columns: 21% auto;}
 .sideBar{@apply bg-[#FFFFFF] p-4}
-.asideTabs{@apply rounded-[4px] hover:bg-[#F3F2F6] cursor-pointer p-4 text-lg }
+.asideTabs{@apply rounded-[4px] hover:bg-[#F3F2F6] cursor-pointer p-4 text-lg flex justify-between items-center }
+.asideTabs p{@apply lg:pr-10}
 .personal-header h1{font-family: "playfairDisplay-regular";}
+.creadit-history-grid{grid-template-columns: auto 35%;}
 .categoryBtn{@apply rounded-[4px] border border-[#FBBC05] p-2}
 .detailCard{grid-template-columns: 25% auto;}
 #headlessui-portal-root{@apply absolute top-0 right-0 bottom-0 left-0 bg-[#00000033]}
