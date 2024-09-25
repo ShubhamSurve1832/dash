@@ -33,9 +33,6 @@ const LoanCard = () => {
                     </Form>
                 )}
             </Formik>
-
-
-
         </div>
     )
 }

@@ -6,4 +6,6 @@ export const autoLoanVals = { requestedMonthlyPayment: "", requestedDownPayment:
 
 export const searchVehicle = {brand:"",modal:"",bodyStyle:"",year:""}
 
+export const vehicleSelectionVals = {options:"",serviceContract:"",warranty:"",vehicleCarryingCost:"",gapInsurance:""}
+
 export const FinalChecklistVals ={singedLoan:"", carFax:"",}

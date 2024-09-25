@@ -6,6 +6,7 @@ import { Form, Formik } from 'formik';
 import { employmentVals } from '../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 import LoanCard from './LoanCard';
+import BankCard from './BankCard';
 
 const LoanOptionTab = () => {
     const [value, setValue] = useState(2000); // Initial slider value
@@ -28,6 +29,9 @@ const LoanOptionTab = () => {
                     </div>
                 </DisclosureButton>
                 <DisclosurePanel className="pt-5 pb-7">
+                    <div>
+                        <BankCard />
+                    </div>
                     <div>
                         <Formik
                             initialValues={employmentVals}

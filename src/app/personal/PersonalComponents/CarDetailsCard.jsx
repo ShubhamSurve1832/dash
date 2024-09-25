@@ -13,11 +13,12 @@ const CarDetailsCard = () => {
                     <p>Used</p>
                 </div>
                 <h3 className='text-lg font-bold mt-3'> 2021 Kia Forte</h3>
-                <p className='text-sm'>EX IVT</p>
-                <div className='flex items-center gap-1 pb-3 border-b mt-2 border-[#E9D9FF]'>
+                <p className='text-sm text-[#00000080]'>EX IVT</p>
+                <div className='flex items-center gap-1 pb-3 border-b my-2 border-[#E9D9FF]'>
                     <MilesIcon />
-                    <p className='text-[#000000B2]'>31,531 Miles</p>
+                    <p className='text-[#000000B2] text-sm'>31,531 Miles</p>
                 </div>
+                <p className='text-[#000000B2] text-sm mt-3'>MSRP</p>
                 <h4 className='font-bold text-lg'>$ 15,995</h4>
                 <PrimaryBtn className=" w-full text-xl mt-4" title="Select" />
             </div>

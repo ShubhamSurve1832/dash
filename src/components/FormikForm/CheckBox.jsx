@@ -59,7 +59,7 @@ const CheckBox = (props) => {
             </svg>
           )}
         </div>
-        <span className="cursor-pointer text-[#00000066] font-semibold">{label}{required && <span className="text-red-600 ml-1">*</span>}</span>
+        <span className="cursor-pointer text-[#000000B2] font-medium">{label}{required && <span className="text-red-600 ml-1">*</span>}</span>
       </label>
       {renderError()}
     </div>

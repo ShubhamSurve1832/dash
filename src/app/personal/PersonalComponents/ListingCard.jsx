@@ -17,13 +17,13 @@ const ListingCard = ({ productList, wishlistIds, removeProduct }) => {
                         <p>Used</p>
                     </div>
                     <h3 className='text-lg font-bold mt-3'> 2021 Kia Forte</h3>                    
-                    <p className='text-sm'>EX IVT</p>
+                    <p className='text-sm text-[#00000080]'>EX IVT</p>
                     <div className='flex items-center gap-1 pb-3 border-b mt-2 border-[#E9D9FF]'>
                         <MilesIcon />
-                        <p className='text-[#000000B2]'>31,531 Miles</p>
+                        <p className='text-[#000000B2] text-sm'>31,531 Miles</p>
                     </div>
                     <div className='flex items-start my-2'>
-                        <p>Auto Nation 1Price</p>
+                        <p className='text-[#333333]'>Auto Nation 1Price</p>
                         <RoundedQuestionIcon />
                     </div>
                     <h4 className='font-bold text-lg'>$ 15,995</h4>
