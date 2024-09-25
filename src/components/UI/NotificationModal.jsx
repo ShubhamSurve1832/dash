@@ -24,7 +24,7 @@ const HistoryLog = ({ title, description, editedBy, timestamp }) => {
 
 const NotificationModal = () => {
     return (
-        <div className='hidden-scroller'>
+        <div className='hidden-scroller h-screen'>
             <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>History</h3>
             <HistoryLog
                 title="Personal"
