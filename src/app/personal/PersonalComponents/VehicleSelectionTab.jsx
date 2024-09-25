@@ -37,12 +37,15 @@ const VehicleSelectionTab = () => {
                             enableReinitialize>
                             {({ handleSubmit }) => (
                                 <Form onSubmit={handleSubmit}>
-                                    <h3 className='text-[#000000B2] text-base font-semibold text-[#150C0B] pb-4 border-b'>Search For</h3>
                                     <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
                                         <FormikForm.Select label='Make or Brand' name='brand' />
                                         <FormikForm.Select label='Model' name='modal' />
                                         <FormikForm.Select label='Body Style' name='bodyStyle' />
                                         <FormikForm.Select label='Years' name='year' />
+                                    </div>
+                                    <div className='my-7'>
+                                        <p className='text-lg font-semibold text-[#000000B2] text-center'>OR</p>
+                                        <FormikForm.Input name="licensePlate" placeholder='Enter stock number' label='Search by stock number' styles='placeholder-[#00000066]  placeholder-sm' />
                                     </div>
                                     <PrimaryBtn onClick={() => setOpen(true)} title="Search All Vehicles" className='w-full text-xl' />
 
