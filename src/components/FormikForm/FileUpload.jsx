@@ -12,7 +12,7 @@ import BlueAddIcon from '@/images/icons/BlueAddIcon';
 const FileUpload = (props) => {
   const [open, setOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
-  const { name, label, updateFilesCb, multiple = false, required, ...rest } = props;
+  const { name, label,inlineStyle, updateFilesCb, multiple = false, required, ...rest } = props;
   const [field, meta] = useField(name);
   const { setFieldTouched, setFieldValue } = useFormikContext();
 
@@ -32,7 +32,7 @@ const FileUpload = (props) => {
   };
 
   return (
-    <div >
+    <div  className={`${inlineStyle}`}>
       {
         label && <label
           htmlFor={name + '-id'}

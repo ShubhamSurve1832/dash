@@ -57,21 +57,23 @@ const AutoLoanTab = () => {
 
                                     <div className='mt-11'>
                                         <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Trade-in Vehicle</h3>
-                                        <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
-                                            <FormikForm.Input name="vin" placeholder='Enter your employer name' label='VIN' styles='placeholder-[#00000066]  placeholder-sm' />
+                                        <div className='grid grid-cols-2 gap-7 gap-y-4 mt-7'>
+                                            <FormikForm.Input name="vin" placeholder='Enter your VIN' label='VIN' styles='placeholder-[#00000066]  placeholder-sm' />
                                         </div>
-                                        <div>
-                                            <p className='text-lg'>Or</p>
+                                        <div className='w-1/2 text-center my-4'>
+                                            <p className='text-lg font-semibold text-[#000000B2]'>OR</p>
                                         </div>
-                                        <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
-                                            <FormikForm.Input name="vin" placeholder='Enter your employer name' label='VIN' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="licensePlate" placeholder='' label='License Plate' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="year" placeholder='' label='Year' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="make" placeholder='' label='Make' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Select label='Model' name='model' />
-                                            <FormikForm.Input name="trim" placeholder='' label='Trim' styles='placeholder-[#00000066]  placeholder-sm' />
+                                        <div className='grid grid-cols-2 gap-7 gap-y-4 mb-5'>
+                                            <FormikForm.FileUpload value='' label="Car Mikes" name="carMikes" updateFilesCb='' />
+                                        </div>
+                                        <div className='grid grid-cols-2 gap-7 gap-y-4 mb-7'>
+                                            <FormikForm.Input name="licensePlate" placeholder='Enter your license plate number' label='License Plate' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input name="year" placeholder='YYYY' label='Year' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Select label='Make' name='make' />
+                                            <FormikForm.Input name="model" placeholder='Select model name' label='Model' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input name="trim" placeholder='Enter trim' label='Trim' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Select label='Current Miles' name='currentMiles' />
-                                            <FormikForm.Input name="notesOnCarCondition" placeholder='Enter current interest rate' inlineStyle='col-span-2' label='Notes on Car Condition' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input type='textarea' name="notesOnCarCondition" placeholder='Enter notes on car condition' inlineStyle='col-span-2' label='Notes on Car Condition' styles='placeholder-[#00000066]  placeholder-sm' />
                                         </div>
                                     </div>
 
@@ -81,6 +83,7 @@ const AutoLoanTab = () => {
                                             <FormikForm.FileUpload value='' label="Car Mikes" name="carMikes" updateFilesCb='' />
                                             <FormikForm.FileUpload value='' label="VIN" name="uploadVIN" updateFilesCb='' />
                                             <FormikForm.FileUpload value='' label="Damages to Vehicle" name="uploadDamages" updateFilesCb='' />
+                                            <FormikForm.FileUpload value='' label="Odometer Reading" name="odometerReading" updateFilesCb='' />
                                         </div>
                                     </div>
                                 </Form>
