@@ -12,7 +12,7 @@ const BankCard = () => {
         <div>
 
             <Formik
-                // initialValues={employmentVals}
+                initialValues={{isChecked: false}}
                 // validationSchema={profileValidationSchema}
                 // onSubmit={onSubmit}
                 enableReinitialize>
@@ -20,7 +20,7 @@ const BankCard = () => {
                     <Form onSubmit={handleSubmit}>
                         <div className='grid grid-cols-4 gap-4'>
                             <div className='p-4 rounded-[4px] bg-[#00000005]'>
-                                <FormikForm.CheckBox name="sort" placeholder='' label='' styles='placeholder-[#00000066]  placeholder-sm' />
+                                <FormikForm.CheckBox name="isChecked" placeholder='' label='' styles='placeholder-[#00000066]  placeholder-sm' />
                                 <div className='mt-5'>
                                     <div className='w-16 h-16 rounded-full flex justify-center items-center bg-white'>
                                         <Image src={BankImage} alt='' className='rounded-full' />
