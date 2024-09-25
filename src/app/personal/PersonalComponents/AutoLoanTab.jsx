@@ -11,7 +11,7 @@ const AutoLoanTab = () => {
     const [initialValues, setInitialValues] = useState(autoLoanVals);
 
     useEffect(() => {
-        setInitialValues({ requestedMonthlyPayment: "", requestedDownPayment: "", interestRate: "", loanTermMonths: "",  remainingLoanBalance: "$ 6,040", monthlyPayment: "$ 300 ", remainingNumberOfPayments: "26", currentInterestRate: "7", vin: "", licensePlate: "", year: "", make: "", model: "", trim: "", currentMiles: "", notesOnCarCondition: "",carMikes:"", uploadVIN:"",uploadDamages:""})
+        setInitialValues({ requestedMonthlyPayment: "", requestedDownPayment: "", interestRate: "", loanTermMonths: "", remainingLoanBalance: "$ 6,040", monthlyPayment: "$ 300 ", remainingNumberOfPayments: "26", currentInterestRate: "7", vin: "", licensePlate: "", year: "", make: "", model: "", trim: "", currentMiles: "", notesOnCarCondition: "", carMikes: "", uploadVIN: "", uploadDamages: "" })
     }, [])
 
     return (
@@ -43,11 +43,11 @@ const AutoLoanTab = () => {
                                         <FormikForm.Input name="requestedDownPayment" placeholder='Enter request down payment' label='Requested Down Payment' styles='placeholder-[#00000066]  placeholder-sm' />
                                         <FormikForm.Input name="interestRate" placeholder='Enter interest rate' label='Interest Rate' styles='placeholder-[#00000066]  placeholder-sm' />
                                         <FormikForm.Input name="loanTermMonths" placeholder='Enter your loan term in months' label='Loan Term (Months)' styles='placeholder-[#00000066]  placeholder-sm' />
-                                    </div>  
+                                    </div>
 
                                     <div className='mt-11'>
                                         <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Current Loan Terms</h3>
-                                        <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>                                            
+                                        <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
                                             <FormikForm.Input name="remainingLoanBalance" placeholder='' label='Remaining Loan Balance' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Input name="monthlyPayment" placeholder='' label='Monthly Payment' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Input name="remainingNumberOfPayments" placeholder='' label='Remaining Number of Payments' styles='placeholder-[#00000066]  placeholder-sm' />
@@ -57,6 +57,12 @@ const AutoLoanTab = () => {
 
                                     <div className='mt-11'>
                                         <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Trade-in Vehicle</h3>
+                                        <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
+                                            <FormikForm.Input name="vin" placeholder='Enter your employer name' label='VIN' styles='placeholder-[#00000066]  placeholder-sm' />
+                                        </div>
+                                        <div>
+                                            <p className='text-lg'>Or</p>
+                                        </div>
                                         <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
                                             <FormikForm.Input name="vin" placeholder='Enter your employer name' label='VIN' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Input name="licensePlate" placeholder='' label='License Plate' styles='placeholder-[#00000066]  placeholder-sm' />
