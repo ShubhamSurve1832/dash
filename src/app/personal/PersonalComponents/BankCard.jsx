@@ -10,9 +10,8 @@ import PrimaryBtn from '@/components/UI/PrimaryBtn'
 const BankCard = () => {
     return (
         <div>
-
             <Formik
-                initialValues={{isChecked: false}}
+                initialValues={{ isChecked: false }}
                 // validationSchema={profileValidationSchema}
                 // onSubmit={onSubmit}
                 enableReinitialize>
@@ -25,10 +24,9 @@ const BankCard = () => {
                                     <div className='w-16 h-16 rounded-full flex justify-center items-center bg-white'>
                                         <Image src={BankImage} alt='' className='rounded-full' />
                                     </div>
-                                    <p className='font-bold text-xl mt-3'>Bank of
-                                        America</p>
+                                    <p className='font-bold text-xl mt-3'>Bank of America</p>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <PrimaryBtn className="w-full text-xl mt-4" title="Generate Loan Options" />
                     </Form>
