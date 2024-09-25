@@ -24,6 +24,7 @@ const BankCard = () => {
                                     <div className='w-16 h-16 rounded-full flex justify-center items-center bg-white'>
                                         <Image src={BankImage} alt='' className='rounded-full' />
                                     </div>
+                                    
                                     <p className='font-bold text-xl mt-3'>Bank of America</p>
                                 </div>
                             </div>
