@@ -6,40 +6,52 @@ import { Form, Formik } from 'formik';
 import { employmentVals } from '../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 import ListingCard from './ListingCard';
+import FilterIcon from '@/images/icons/FilterIcon';
+import SortIcon from '@/images/icons/SortIcon';
 
 const VehicleListing = () => {
     return (
-        <>            
-                <div>
-                    <Formik
-                        initialValues={employmentVals}
-                        // validationSchema={profileValidationSchema}
-                        // onSubmit={onSubmit}
-                        enableReinitialize>
-                        {({ handleSubmit }) => (
-                            <Form onSubmit={handleSubmit}>
-                                <div className='flex gap-4 mb-6'>
-                                    <div className='categoryBtn'>
-                                        <FormikForm.CheckBox name="singedLoan" placeholder='' label='New' styles='placeholder-[#00000066] mb-0 placeholder-sm' />
-                                    </div>
-                                    <div className='categoryBtn'>
-                                        <FormikForm.CheckBox name="singedLoan" placeholder='' label='Used' styles='placeholder-[#00000066] mb-0 placeholder-sm' />
-                                    </div>
-                                    <div className='categoryBtn'>
-                                        <FormikForm.CheckBox name="singedLoan" placeholder='' label='Certified' styles='placeholder-[#00000066] mb-0 placeholder-sm' />
-                                    </div>
+        <>
+            <div>
+                <div className='flex gap-4'>
+                    <div className='flex justify-between items-center gap-2 p-3 border border-[#572E91] rounded-md'>
+                        <FilterIcon />
+                        <p>Filter</p>
+                    </div>
+                    <div className='flex justify-between items-center gap-2 p-3 border border-[#572E91] rounded-md'>
+                        <SortIcon />
+                        <p>Sort</p>
+                    </div>
+                </div>
+                <Formik
+                    initialValues={employmentVals}
+                    // validationSchema={profileValidationSchema}
+                    // onSubmit={onSubmit}
+                    enableReinitialize>
+                    {({ handleSubmit }) => (
+                        <Form onSubmit={handleSubmit}>
+                            <div className='flex gap-4 mb-6'>
+                                <div className='categoryBtn'>
+                                    <FormikForm.CheckBox name="singedLoan" placeholder='' label='New' styles='placeholder-[#00000066] mb-0 placeholder-sm' />
                                 </div>
-                                <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>25 Vehicles</h3>
+                                <div className='categoryBtn'>
+                                    <FormikForm.CheckBox name="singedLoan" placeholder='' label='Used' styles='placeholder-[#00000066] mb-0 placeholder-sm' />
+                                </div>
+                                <div className='categoryBtn'>
+                                    <FormikForm.CheckBox name="singedLoan" placeholder='' label='Certified' styles='placeholder-[#00000066] mb-0 placeholder-sm' />
+                                </div>
+                            </div>
+                            <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>25 Vehicles</h3>
 
-                                <div className='grid justify-between grid-cols-3 gap-5 mt-4'>
-                                    <ListingCard />
-                                    <ListingCard />
-                                    <ListingCard />
-                                </div>
-                            </Form>
-                        )}
-                    </Formik>
-                </div>  
+                            <div className='grid justify-between grid-cols-3 gap-5 mt-4'>
+                                <ListingCard />
+                                <ListingCard />
+                                <ListingCard />
+                            </div>
+                        </Form>
+                    )}
+                </Formik>
+            </div>
         </>
     )
 }
