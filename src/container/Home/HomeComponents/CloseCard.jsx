@@ -19,7 +19,7 @@ const CloseCard = () => {
                         </ol>
                     </div>
                     <div className='flex justify-between items-center pb-4  '>
-                        <p className='text-[#000000B2] text-base font-semibold'>Decreased to $2,500</p>
+                        <p className='text-base text-[#000000B2] font-semibold'>Decreased to $2,500</p>
                     </div>
                 </div>
             </div>
