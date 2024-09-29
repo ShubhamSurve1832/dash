@@ -3,7 +3,7 @@ import { useField, useFormikContext } from 'formik';
 import clsx from 'clsx';
 
 const formClasses =
-    'block w-full rounded-md aitek-input mt-1 block w-full rounded-md border !border-[#CCCCCC] p-2 outline-none'
+    'block w-full rounded-md mt-1 block w-full rounded-md border !border-[#CCCCCC] p-2 outline-none placeholder:bg-white';
 
 const Input = (props) => {
     const { name, placeholder, inlineStyle, label, styles, type = 'text', onChange, disabled = false, required, ...rest } = props;

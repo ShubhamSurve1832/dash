@@ -1,16 +1,17 @@
+'use client'
 import { useField, useFormikContext } from 'formik';
 import clsx from 'clsx'
 import { useState } from 'react';
 // import { EyeClosed, EyeOpen } from '@/config/icons';
 
 
-const formClasses = 'block w-full  border border-[#B6B4B3] rounded-md aitek-input'
+const formClasses = 'block w-full rounded-md aitek-input mt-1 block w-full rounded-md border !border-[#CCCCCC] p-2 outline-none'
 
 
 const PasswordInput = (props) => {
 
     const [togglePassword, setTogglePassword] = useState(false)
-    const { name, placeholder, inlineStyle, label, type = "text", onChange, required, disabled = false, ...rest } = props;
+    const { name, placeholder,contaeinrStyle, inlineStyle, label, type = "text", onChange, required, disabled = false, ...rest } = props;
     const [field, meta] = useField(name);
     const { setFieldTouched, setFieldValue } = useFormikContext();
     const renderError = () => {
@@ -22,12 +23,12 @@ const PasswordInput = (props) => {
     }
 
     return (
-        <div className='mb-3' style={inlineStyle}>
+        <div className={`mb-3 ${contaeinrStyle}`} style={inlineStyle}>
             {
                 label &&
                 <label
                     htmlFor={name + '-id'}
-                    className="block xl:text-lg text-base font-medium text-[#150C0B] mb-3 "
+                    className="block text-base font-semibold text-[#150C0B] mb-2 tracking-[1px]"
                 >
                     {label}
                     {required && <span className="text-red-600 ml-1">*</span>}

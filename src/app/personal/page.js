@@ -10,6 +10,8 @@ import LoanOptionTab from './PersonalComponents/LoanOptionTab';
 import FinalChecklistTab from './PersonalComponents/FinalChecklistTab';
 import NotificationModal from '@/components/UI/NotificationModal';
 import GreenChecked from '@/images/icons/GreenChecked';
+import OffersTab from './PersonalComponents/OffersTab';
+import InfoTab from './PersonalComponents/InfoTab';
 
 
 const page = () => {
@@ -73,6 +75,8 @@ const page = () => {
                 <VehicleSelectionTab />
                 <LoanOptionTab />
                 <FinalChecklistTab />
+                <OffersTab />
+                <InfoTab />
             </div>
         </div>
     )

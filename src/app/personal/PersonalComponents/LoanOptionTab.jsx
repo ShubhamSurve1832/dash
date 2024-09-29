@@ -7,6 +7,23 @@ import { employmentVals } from '../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 import LoanCard from './LoanCard';
 import BankCard from './BankCard';
+import Slider from 'react-slick';
+import { COMMON_SETTINGS } from '@/config/constants';
+
+const settings = COMMON_SETTINGS({
+    dots: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    slidesToShow480: 1,
+    centerMode480: false,
+    centerPadding480: '35px',
+    dots1024: false,
+    dots600: false,
+    dots480: false
+});
+
 
 const LoanOptionTab = () => {
     const [value, setValue] = useState(2000); // Initial slider value
@@ -46,9 +63,12 @@ const LoanOptionTab = () => {
                                 </Form>
                             )}
                         </Formik>
-                        <div className='grid grid-cols-2 gap-4'>
-                            <LoanCard />
-                            <LoanCard />
+                        <div className='w-[970px]'>
+                            <Slider {...settings}>
+                                <LoanCard />
+                                <LoanCard />
+                                <LoanCard />
+                            </Slider>
                         </div>
                     </div>
                 </DisclosurePanel>
