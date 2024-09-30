@@ -9,3 +9,5 @@ export const searchVehicle = {brand:"",modal:"",bodyStyle:"",year:""}
 export const vehicleSelectionVals = {options:"",serviceContract:"",warranty:"",vehicleCarryingCost:"",gapInsurance:""}
 
 export const FinalChecklistVals ={singedLoan:"", carFax:"",}
+
+export const filterVals = {sunRoof:"",cruiseControl:"",fourWheelDrive:"",hillHoldControl:"",musicSystem:"",ventilatedSeats:""}

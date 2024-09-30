@@ -113,6 +113,20 @@ const PersonalTab = () => {
                                 </div>
                                 <div className='p-6 rounded-[4px] border border-[#00000033]'>
                                     <h3 className='text-lg font-bold mb-6'>Credit Mix</h3>
+                                    <div className='bg-[#00000008] rounded-sm p-4'>
+                                        <div className='flex gap-2 items-center pb-2 border-b-[0.5px] border-[#00000033]'>
+                                            <span className='bg-[#49A677] w-2 h-2 rounded-full'></span>
+                                            <h3 className='font-bold'>Education Summary</h3>
+                                        </div>
+                                        <div className='pt-4'>
+                                            <div className='flex justify-between font-semibold text-sm pb-4'><p>Outstanding Balance</p><p>$ 10,000</p></div>
+                                            <div className='flex justify-between font-semibold text-sm pb-4'><p>Principal </p><p>$ 100</p></div>
+                                            <div className='flex justify-between font-semibold text-sm pb-4'><p>Interest</p><p>$ 200</p></div>
+                                        </div>
+                                        <div className='pt-4 border-t-[0.5px] border-[#00000033]'>
+                                            <div className='flex justify-between font-semibold text-sm'><p>Total Payment</p><p>$ 300</p></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
