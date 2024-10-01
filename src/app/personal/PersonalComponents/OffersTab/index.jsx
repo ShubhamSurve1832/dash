@@ -33,17 +33,17 @@ const OffersTab = () => {
                 <Form onSubmit={handleSubmit}>
                   <h3 className='text-[#000000B2] font-medium text-xl pb-4 mb-4 border-b'>Loan Terms</h3>
                   <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
-                    <FormikForm.Input lable="Loan Amount" name="loanAmount" placeholder="Loan Amount" />
-                    <FormikForm.Input lable="Down Payment" name="downPayment" placeholder="Down Payment" />
-                    <FormikForm.Input lable="Annual Percentage Rate (APR)" name="annualRate" placeholder="Annual Percentage Rate (APR)" />
-                    <FormikForm.Input lable="Loan Duration" name="loanDuration" placeholder="Loan Duration" />
-                    <FormikForm.Input lable="Monthly Payment" name="monthlyPayment" placeholder="Monthly payment" />
+                    <FormikForm.Input label="Loan Amount" name="loanAmount" placeholder="Loan Amount" />
+                    <FormikForm.Input label="Down Payment" name="downPayment" placeholder="Down Payment" />
+                    <FormikForm.Input label="Annual Percentage Rate (APR)" name="annualRate" placeholder="Annual Percentage Rate (APR)" />
+                    <FormikForm.Input label="Loan Duration" name="loanDuration" placeholder="Loan Duration" />
+                    <FormikForm.Input label="Monthly Payment" name="monthlyPayment" placeholder="Monthly payment" />
                   </div>
                   <h3 className='text-[#000000B2] font-medium text-xl pb-4 mb-4 border-b'>Additional Fees</h3>
                   <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
-                    <FormikForm.Input lable="Documentation Fee" name="documentationFee" placeholder="" />
-                    <FormikForm.Input lable="Title and Registeration" name="titleAndRegisteration" placeholder="" />
-                    <FormikForm.Input lable="Others" name="others" placeholder="" />
+                    <FormikForm.Input label="Documentation Fee" name="documentationFee" placeholder="" />
+                    <FormikForm.Input label="Title and Registeration" name="titleAndRegisteration" placeholder="" />
+                    <FormikForm.Input label="Others" name="others" placeholder="" />
                   </div>
                   <div className='flex justify-between p-4 border border-[#28A820] rounded-[4px] text-[#28A820] mt-6' >
                     <p className='text-xl'>Total Finance Charge</p>
