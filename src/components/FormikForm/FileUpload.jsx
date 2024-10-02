@@ -38,7 +38,7 @@ const FileUpload = (props) => {
           htmlFor={name + '-id'}
           className="block text-base font-semibold text-[#150C0B] mb-2 tracking-[1px]"
         >
-          {label}:
+          {label}
           {required && <span className="text-red-600 ml-1">*</span>}
         </label>
       }

@@ -2,16 +2,17 @@ import React from 'react'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
 import HistoryClockIcon from '@/images/icons/HistoryClockIcon';
-import PersonalTab from './PersonalComponents/PersonalTab';
-import EmploymentTab from './PersonalComponents/EmploymentTab';
-import AutoLoanTab from './PersonalComponents/AutoLoanTab';
-import VehicleSelectionTab from './PersonalComponents/VehicleSelectionTab';
-import LoanOptionTab from './PersonalComponents/LoanOptionTab';
-import FinalChecklistTab from './PersonalComponents/FinalChecklistTab';
-import NotificationModal from '@/components/UI/NotificationModal';
+import PersonalTab from './PersonalComponents/PersonalTab/PersonalTab';
+import EmploymentTab from './PersonalComponents/EmploymentTab/EmploymentTab';
+import AutoLoanTab from './PersonalComponents/AutoLoanTab/AutoLoanTab';
+import VehicleSelectionTab from './PersonalComponents/VehicleSelectionTab/VehicleSelectionTab';
+import LoanOptionTab from './PersonalComponents/LoanOptionTab/LoanOptionTab';
+import FinalChecklistTab from './PersonalComponents/FinalChecklistTab/FinalChecklistTab';
+import NotificationModal from '@/components/Shared/NotificationModal';
 import GreenChecked from '@/images/icons/GreenChecked';
 import OffersTab from './PersonalComponents/OffersTab';
 import InfoTab from './PersonalComponents/InfoTab';
+import CoApplicantTab from './PersonalComponents/CoApplicantTab/CoApplicantTab';
 
 
 const page = () => {
@@ -70,6 +71,7 @@ const page = () => {
                     </div>
                 </div>
                 <PersonalTab />
+                <CoApplicantTab />
                 <EmploymentTab />
                 <AutoLoanTab />
                 <VehicleSelectionTab />

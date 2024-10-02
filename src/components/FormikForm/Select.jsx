@@ -10,7 +10,7 @@ const formClasses = 'block w-full rounded-md aitek-input mt-1 block w-full round
 
 const Select = (props) => {
 
-    const { name, placeholder, label, onChange, options, disabled = false, required, styles, ...rest } = props;
+    const { name, placeholder, label, containerStyle, onChange, options, disabled = false, required, styles, ...rest } = props;
     const [field, meta] = useField(name);
 
     const { setFieldTouched, setFieldValue } = useFormikContext();
@@ -24,7 +24,7 @@ const Select = (props) => {
         )
     }
     return (
-        <div className='mb-3'>
+        <div className={`mb-3 ${containerStyle}`}>
             {
                 label &&
                 <label

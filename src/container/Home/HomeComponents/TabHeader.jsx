@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import PlusIcon from '@/images/icons/PlusIcon'
 import SSNModal from './SSNModal'
+import DriverLicenseModal from './DriverLicenseModal'
 
 const TabHeader = () => {
     const [open, setOpen] = useState(false)
@@ -23,7 +24,8 @@ const TabHeader = () => {
                 <PlusIcon />
             </div>
         </div>
-        <SSNModal open={open} setOpen={setOpen} />
+        {/* <SSNModal open={open} setOpen={setOpen} /> */}
+        <DriverLicenseModal open={open} setOpen={setOpen} />
         </>
     )
 }

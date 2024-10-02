@@ -7,8 +7,8 @@ import 'react-datepicker/dist/react-datepicker.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import Header from "@/components/UI/Header";
-import Footer from "@/components/UI/Footer";
+import Header from "@/components/Shared/Header";
+import Footer from "@/components/Shared/Footer";
 
 
 
