@@ -1,11 +1,20 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import CarDetailsCard from './CarDetailsCard'
 import PrimaryBtn from '@/components/UI/PrimaryBtn'
 import { Form, Formik } from 'formik'
 import { FormikForm } from '@/components/FormikForm'
 import { vehicleSelectionVals } from '@/config/constants/initialValues'
+import PermissionModal from '@/components/Shared/PermissionModal'
+
+const options=[
+  { label: 'Option 1', value: '1' },
+  { label: 'Option 2', value: '2' },
+  { label: 'Option 3', value: '3' },
+]
 
 const DetailTab = () => {
+  const [open , setOpen] = useState(false)
   return (
     <div>
       <Formik
@@ -38,7 +47,7 @@ const DetailTab = () => {
               </div>
             </div>
             <div className='mt-6 grid grid-cols-2 gap-7 gap-y-4'>
-              <FormikForm.Select label='Options' name='options' />
+              <FormikForm.MultipleSelect closeMenuOnSelect={false} isMulti name='options' label='Options' options={options} />
               <FormikForm.Input name="serviceContract" placeholder='' label='Service Contract' styles='placeholder-[#00000066]  placeholder-sm' />
               <FormikForm.Input name="warranty" placeholder='' label='Warranty' styles='placeholder-[#00000066]  placeholder-sm' />
               <FormikForm.Input name="vehicleCarryingCost" placeholder='' label='Vehicle Carrying Cost' styles='placeholder-[#00000066]  placeholder-sm' />
@@ -68,11 +77,12 @@ const DetailTab = () => {
                   <p>$5000</p>
                 </div>
               </div>
-              <PrimaryBtn className=" w-full text-xl mt-6" title="Select" />
+              <PrimaryBtn className=" w-full text-xl mt-6" title="Select" onClick={() => setOpen(true)} />
             </div>
           </Form>
         )}
       </Formik>
+      {open && <PermissionModal open={open} setOpen={setOpen} />}
     </div >
   )
 }

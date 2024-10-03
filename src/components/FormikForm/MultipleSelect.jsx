@@ -10,7 +10,7 @@ export const animatedComponents = makeAnimated();
 
 const MultipleSelect = (props) => {
 
-    const { name, label, onChange, options, className, containerStyle, onInputChange, required, ...rest } = props;
+    const { name, label, onChange, options, className, onInputChange, required, ...rest } = props;
     const [field, meta] = useField(name);
     const { setFieldTouched, setFieldValue } = useFormikContext();
 
@@ -23,11 +23,11 @@ const MultipleSelect = (props) => {
     }
 
     return (
-        <div className={`mb-3 ${containerStyle}`}>
+        <div className='mb-3'>
             {
                 label && <label
                     htmlFor={name + '-id'}
-                    className="mb-1 block text-sm font-medium text-gray-700"
+                    className="block text-base font-semibold text-[#150C0B] mb-2 tracking-[1px]"
                 >
                     {label}
                     {required && <span className="text-red-600 ml-1">*</span>}
@@ -41,7 +41,7 @@ const MultipleSelect = (props) => {
                 components={animatedComponents}
                 {...field}
                 onChange={(val) => {
-                    if (onChange) onChange({ target: { value: val.value, name, config: val.config } });
+                    if (onChange) onChange({ target: { value: val.value, name, }, ids: val });
                     setFieldTouched(name, true);
                     setFieldValue(name, val ? val : []);
                 }}

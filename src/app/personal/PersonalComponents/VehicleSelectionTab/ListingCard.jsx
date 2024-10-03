@@ -1,6 +1,7 @@
 'use client'
 import MilesIcon from '@/images/icons/MilesIcon';
 import RoundedQuestionIcon from '@/images/icons/RoundedQuestionIcon';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const ListingCard = ({ productList, wishlistIds, removeProduct }) => {
@@ -10,7 +11,7 @@ const ListingCard = ({ productList, wishlistIds, removeProduct }) => {
 
             <div className='border border-[#E9D9FF] bg-[#E9D9FF1A] rounded-xl p-4'>
                 <div className='rounded-xl relative' >
-                    <img loading='lazy' width={100} height={100} src="/images/carImage.svg" className='rounded-xl w-full' alt="Place image" />
+                    <Image loading='lazy' width={100} height={100} src="/images/carImage.svg" className='rounded-xl w-full' alt="Place image" />
                 </div>
                 <div className='2xl:mt-6 mt-5'>
                     <div className='categoryBtn w-max'>

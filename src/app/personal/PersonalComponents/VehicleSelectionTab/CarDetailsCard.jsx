@@ -6,7 +6,7 @@ const CarDetailsCard = () => {
     return (
         <div className='border border-[#E9D9FF] rounded-[4px] p-4 bg-[#E9D9FF1A] grid gap-4 detailCard'>
             <div>
-                <img loading='lazy' width={100} height={100} src="/images/carImage.svg" className='rounded-xl w-full' alt="Place image" />
+                <img loading='lazy' width={100} height={100} src="/images/carImage.svg" className='rounded-xl w-full h-full object-cover' alt="Place image" />
             </div>
             <div>
                 <div className=' w-max categoryBtn'>

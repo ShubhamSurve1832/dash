@@ -6,7 +6,7 @@ const formClasses =
     'block w-full rounded-md mt-1 block w-full rounded-md border !border-[#CCCCCC] p-2 outline-none placeholder:bg-white';
 
 const Input = (props) => {
-    const { name, placeholder, inlineStyle, label, styles, type = 'text', onChange, disabled = false, required, ...rest } = props;
+    const { name, placeholder, inlineStyle,perCentage, label, styles, type = 'text', onChange, disabled = false, required, ...rest } = props;
     const [field, meta] = useField(name);
     const { setFieldTouched, setFieldValue } = useFormikContext();
 
@@ -51,6 +51,7 @@ const Input = (props) => {
                     {...rest}
                 />
             ) : (
+                <div className='relative'>
                 <input
                     disabled={disabled}
                     id={name + '-id'}
@@ -70,6 +71,10 @@ const Input = (props) => {
                     })}
                     {...rest}
                 />
+                { perCentage &&
+                    <span className='absolute right-3 top-2'>%</span>
+                }
+                </div>
             )}
 
             {renderError()}

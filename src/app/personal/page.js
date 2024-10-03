@@ -13,6 +13,7 @@ import GreenChecked from '@/images/icons/GreenChecked';
 import OffersTab from './PersonalComponents/OffersTab';
 import InfoTab from './PersonalComponents/InfoTab';
 import CoApplicantTab from './PersonalComponents/CoApplicantTab/CoApplicantTab';
+import PreviewTab from './PersonalComponents/PreviewTab/PreviewTab';
 
 
 const page = () => {
@@ -77,6 +78,7 @@ const page = () => {
                 <VehicleSelectionTab />
                 <LoanOptionTab />
                 <FinalChecklistTab />
+                <PreviewTab />
                 <OffersTab />
                 <InfoTab />
             </div>
