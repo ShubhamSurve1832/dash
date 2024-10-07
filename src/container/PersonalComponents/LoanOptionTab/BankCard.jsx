@@ -3,7 +3,7 @@ import React from 'react'
 import { Form, Formik } from 'formik'
 import { FormikForm } from '@/components/FormikForm'
 import Image from 'next/image'
-import BankImage from '../../../../../public/images/bankImage.jpg'
+import BankImage from '../../../../public/images/bankImage.jpg'
 import PrimaryBtn from '@/components/UI/PrimaryBtn'
 
 

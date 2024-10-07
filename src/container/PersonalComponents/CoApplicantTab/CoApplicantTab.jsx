@@ -3,21 +3,20 @@ import React, { useEffect, useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, } from "@headlessui/react";
 import DownArrow from '@/images/icons/DownArrow';
 import { Form, Formik } from 'formik';
-import { personalVals } from '../../../../config/constants/initialValues'
+import { personalVals } from '../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 import PrimaryBtn from '@/components/UI/PrimaryBtn';
 import CommentIcon from '@/images/icons/CommentIcon';
 import SaveIcon from '@/images/icons/SaveIcon';
 import CommentModal from '@/components/Shared/CommentModal';
 
-const PersonalTab = () => {
+const CoApplicantTab = () => {
     const [initialValues, setInitialValues] = useState(personalVals);
-    const [open , setOpen] = useState(false)
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
         setInitialValues({ firstName: "Lauren", lastName: "Smith", email: "lauren@email.com", mobileNumber: "+1 123 456-7890", dateOfBirth: "", ssn: "387 - 43 - 4324", driverLicenseNumber: "D84738", driverLicenseState: "California", streetAddress: "Queen Towers", city: "Los Angeles", state: "California", zipCode: "90001" })
     }, [])
-
     const onSubmit = (values) => {
         console.log("values", values)
     }
@@ -29,7 +28,7 @@ const PersonalTab = () => {
             >
                 <DisclosureButton className="p-3 group flex w-full items-center justify-between bg-[#F3F2F6]  rounded-[4px] tracking-[1px]">
                     <span className="text-xl font-semibold text-[#000000] group-data-[hover]:text-black/80">
-                        Personal
+                        Co-applicant
                     </span>
                     <div className="flex items-center justify-center text-black">
                         <DownArrow />
@@ -87,31 +86,31 @@ const PersonalTab = () => {
                             <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Credit History</h3>
                             <div className='grid creadit-history-grid gap-7 gap-y-4 my-7'>
                                 <div>
-                                    <div className='p-6 rounded-[4px] border border-[#00000033] relative'>
+                                    <div className='p-6 rounded-[4px] border border-[[#EC675E]] relative bg-[#EB1E090D]'>
                                         <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]' onClick={() => setOpen(true)}>
                                             <CommentIcon />
                                         </div>
-                                        <h3 className='text-lg font-bold mb-6'>Credit Score</h3>
-                                        <p className='text-[#344BFD] font-bold text-4xl'>700</p>
+                                        <h3 className='text-[#EC675E] text-lg font-bold mb-6'>Credit Score</h3>
+                                        <p className='text-[#EC675E] font-bold text-4xl'>450</p>
                                     </div>
                                     <div className='p-6 rounded-[4px] border border-[#00000033] mt-6 relative'>
-                                        <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]'>
+                                        <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]' onClick={() => setOpen(true)}>
                                             <CommentIcon />
                                         </div>
                                         <h3 className='text-lg font-bold mb-6'>Credit Score</h3>
                                         <div className='grid grid-cols-2 gap-6'>
                                             <div className='p-5 rounded-[4px] border border-[#00000033] text-center'>
                                                 <h4 className='text-sm font-semibold mb-6'>Total Outstanding Loan</h4>
-                                                <p className='text-[#F68D2B] font-bold text-4xl'>$20,000</p>
+                                                <p className='text-[#F68D2B] font-bold text-4xl'>$ 25,000</p>
                                             </div>
                                             <div className='p-5 rounded-[4px] border border-[#00000033] text-center'>
                                                 <h4 className='text-sm font-semibold mb-6'>Minimum Payable Amount</h4>
-                                                <p className='text-[#F68D2B] font-bold text-4xl'>$ 750</p>
+                                                <p className='text-[#F68D2B] font-bold text-4xl'>$ 1,200</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='p-6 rounded-[4px] border-[0.5px] text-center border-[#00000033] mt-6 relative'>
-                                        <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]'onClick={() => setOpen(true)}>
+                                        <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]' onClick={() => setOpen(true)}>
                                             <CommentIcon />
                                         </div>
                                         <h3 className='text-lg font-bold mb-6'>Risk Balancing Percentage</h3>
@@ -122,11 +121,11 @@ const PersonalTab = () => {
                                             </div>
                                             <div className='p-5 rounded-[4px] border-[0.5px] text-center border-[#00000033]'>
                                                 <h4 className='text-base font-bold text-[#666666] mb-2'>Median</h4>
-                                                <p className='text-[#288827] font-bold text-4xl'>5%</p>
+                                                <p className='text-[#288827] font-bold text-4xl'>7%</p>
                                             </div>
                                             <div className='p-5 rounded-[4px] border-[0.5px] text-center border-[#00000033]'>
                                                 <h4 className='text-base font-bold text-[#666666] mb-2'>Max</h4>
-                                                <p className='text-[#288827] font-bold text-4xl'>7%</p>
+                                                <p className='text-[#288827] font-bold text-4xl'>11%</p>
                                             </div>
                                         </div>
                                     </div>
@@ -160,9 +159,9 @@ const PersonalTab = () => {
                     </div>
                 </DisclosurePanel>
             </Disclosure>
-            { open && <CommentModal open={open} setOpen={setOpen} />}
+            {open && <CommentModal open={open} setOpen={setOpen} />}
         </div>
     )
 }
 
-export default PersonalTab;
+export default CoApplicantTab

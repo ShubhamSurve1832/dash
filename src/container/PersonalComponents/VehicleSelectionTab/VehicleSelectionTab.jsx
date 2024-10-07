@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, } from "@headlessui/react";
 import DownArrow from '@/images/icons/DownArrow';
 import { Form, Formik } from 'formik';
-import { searchVehicle } from '../../../../config/constants/initialValues'
+import { searchVehicle } from '../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 import PrimaryBtn from '@/components/UI/PrimaryBtn';
 import VehicleListing from './VehicleListing';

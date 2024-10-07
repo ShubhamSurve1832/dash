@@ -27,7 +27,7 @@
 }
 
 
-body { color: var(--foreground);background: var(--background);font-family: 'RobotoRegular';max-width: 1300px;margin-inline: auto;background-color: #F3F2F6; margin: 1.75rem; margin-inline: auto ;}
+body { background: var(--background);font-family: 'RobotoRegular';max-width: 1300px;margin-inline: auto;background-color: #F3F2F6; margin: 1.75rem; margin-inline: auto ;}
 
 @layer utilities {
   .text-balance {
