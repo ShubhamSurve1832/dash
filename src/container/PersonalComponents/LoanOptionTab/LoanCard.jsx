@@ -3,7 +3,7 @@ import { FormikForm } from '@/components/FormikForm'
 import PrimaryBtn from '@/components/UI/PrimaryBtn'
 import SecondaryBtn from '@/components/UI/SecondaryBtn'
 import { employmentVals } from '@/config/constants/initialValues'
-import BankImage from '../../../../../public/images/bankImage.jpg'
+import BankImage from '../../../../public/images/bankImage.jpg'
 import Image from 'next/image'
 import { Form, Formik } from 'formik'
 

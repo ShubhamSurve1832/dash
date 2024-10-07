@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, } from "@headlessui/react";
 import DownArrow from '@/images/icons/DownArrow';
 import { Form, Formik } from 'formik';
-import { employmentVals } from '../../../../config/constants/initialValues'
+import { employmentVals } from '../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 import LoanCard from './LoanCard';
 import BankCard from './BankCard';
