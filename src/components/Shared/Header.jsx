@@ -53,10 +53,12 @@ const Header = () => {
 
                 </div>
                 <div className='flex justify-between items-center gap-3'>
-                    <div className='nav-rounded-btn relative'>
-                        <ChatIcon />
-                        <NotificationNumbers className='bg-[#5D6FFD]'>3</NotificationNumbers>
-                    </div>
+                    <Link href="/chat" className='cursor-pointer'>
+                        <div className='nav-rounded-btn relative'>
+                            <ChatIcon />
+                            <NotificationNumbers className='bg-[#5D6FFD]'>3</NotificationNumbers>
+                        </div>
+                    </Link>
                     <div className='nav-rounded-btn relative'>
                         <WarningIcon />
                         <NotificationNumbers className='bg-[#EC675E]'>13</NotificationNumbers>

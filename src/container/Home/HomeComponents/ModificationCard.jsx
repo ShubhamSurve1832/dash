@@ -5,7 +5,7 @@ const ModificationCard = () => {
     return (
         <div className='border-[#572E9133] border-[0.5px] rounded-[4px] mb-6 relative '>            
             <div className='bg-[#E9D9FF33] p-4'>
-                <h3 className='font-semibold text-2xl mr-8'>Joyce 
+                <h3 className='font-semibold text-[26px] mr-8'>Joyce 
                 Anderson</h3>
                 <span className='text-[#00000080] mt-2 text-sm'>Id: 254</span>
             </div>

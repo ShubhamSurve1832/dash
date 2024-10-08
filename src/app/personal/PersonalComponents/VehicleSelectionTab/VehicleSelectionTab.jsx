@@ -29,7 +29,7 @@ const VehicleSelectionTab = () => {
                 </DisclosureButton>
                 <DisclosurePanel className="pt-5">
                     <div>
-                        <Progressbar steps={1}/>
+                        <Progressbar />
                         <Formik
                             initialValues={searchVehicle}
                             // validationSchema={profileValidationSchema}

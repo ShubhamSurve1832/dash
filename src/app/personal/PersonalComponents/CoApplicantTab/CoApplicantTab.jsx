@@ -7,13 +7,9 @@ import { personalVals } from '../../../../config/constants/initialValues'
 import { FormikForm } from '@/components/FormikForm';
 import PrimaryBtn from '@/components/UI/PrimaryBtn';
 import CommentIcon from '@/images/icons/CommentIcon';
-import SaveIcon from '@/images/icons/SaveIcon';
-import CommentModal from '@/components/Shared/CommentModal';
 
 const CoApplicantTab = () => {
     const [initialValues, setInitialValues] = useState(personalVals);
-    const [open, setOpen] = useState(false)
-
     useEffect(() => {
         setInitialValues({ firstName: "Lauren", lastName: "Smith", email: "lauren@email.com", mobileNumber: "+1 123 456-7890", dateOfBirth: "", ssn: "387 - 43 - 4324", driverLicenseNumber: "D84738", driverLicenseState: "California", streetAddress: "Queen Towers", city: "Los Angeles", state: "California", zipCode: "90001" })
     }, [])
@@ -57,13 +53,7 @@ const CoApplicantTab = () => {
                                         <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
                                             <FormikForm.Input name="ssn" placeholder='' label='SSN' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Input name="driverLicenseNumber" placeholder='' label='Driver License No.' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <div className='col-span-2'>
-                                                <FormikForm.FileUpload value='' label="OR" name="or" updateFilesCb='' />
-                                                <div className='flex items-center mt-6 gap-4'>
-                                                    <div className='font-semibold flex gap-2 border border-[#CCCCCC] rounded-[4px] bg-[#FFFFFF0D] p-2 w-full'><SaveIcon /> <span>Image name.jpg</span></div>
-                                                    <div className='font-semibold flex gap-2 border border-[#CCCCCC] rounded-[4px] bg-[#FFFFFF0D] p-2 w-full'><SaveIcon /> <span>Image name.jpg</span></div>
-                                                </div>
-                                            </div>
+                                            <FormikForm.FileUpload value='' label="OR" name="or" updateFilesCb='' />
                                             <FormikForm.Select label='Driver License State' name='driverLicenseState' />
                                         </div>
                                     </div>
@@ -87,14 +77,14 @@ const CoApplicantTab = () => {
                             <div className='grid creadit-history-grid gap-7 gap-y-4 my-7'>
                                 <div>
                                     <div className='p-6 rounded-[4px] border border-[[#EC675E]] relative bg-[#EB1E090D]'>
-                                        <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]' onClick={() => setOpen(true)}>
+                                        <div className='absolute right-1 top-1'>
                                             <CommentIcon />
                                         </div>
                                         <h3 className='text-[#EC675E] text-lg font-bold mb-6'>Credit Score</h3>
                                         <p className='text-[#EC675E] font-bold text-4xl'>450</p>
                                     </div>
                                     <div className='p-6 rounded-[4px] border border-[#00000033] mt-6 relative'>
-                                        <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]' onClick={() => setOpen(true)}>
+                                        <div className='absolute right-1 top-1'>
                                             <CommentIcon />
                                         </div>
                                         <h3 className='text-lg font-bold mb-6'>Credit Score</h3>
@@ -110,7 +100,7 @@ const CoApplicantTab = () => {
                                         </div>
                                     </div>
                                     <div className='p-6 rounded-[4px] border-[0.5px] text-center border-[#00000033] mt-6 relative'>
-                                        <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]' onClick={() => setOpen(true)}>
+                                        <div className='absolute right-1 top-1'>
                                             <CommentIcon />
                                         </div>
                                         <h3 className='text-lg font-bold mb-6'>Risk Balancing Percentage</h3>
@@ -131,7 +121,7 @@ const CoApplicantTab = () => {
                                     </div>
                                 </div>
                                 <div className='p-6 rounded-[4px] border border-[#00000033] relative'>
-                                    <div className='absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]' onClick={() => setOpen(true)}>
+                                    <div className='absolute right-1 top-1'>
                                         <CommentIcon />
                                     </div>
                                     <h3 className='text-lg font-bold mb-6'>Credit Mix</h3>
@@ -159,7 +149,6 @@ const CoApplicantTab = () => {
                     </div>
                 </DisclosurePanel>
             </Disclosure>
-            {open && <CommentModal open={open} setOpen={setOpen} />}
         </div>
     )
 }

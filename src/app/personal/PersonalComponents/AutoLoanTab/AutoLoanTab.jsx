@@ -46,30 +46,17 @@ const AutoLoanTab = () => {
                                     </div>
 
                                     <div className='mt-11'>
-                                        <div className='flex justify-between items-center'>
-                                            <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Current Loan Terms</h3>
-                                            <label class="inline-flex items-center cursor-pointer">
-                                                <input type="checkbox" value="" class="sr-only peer" />
-                                                <div class="relative w-11 h-6 bg-[#E9D9FF80] peer-focus:outline-none border border-[#572E91] rounded-full peer peer-checked:after:-left-[0px] peer-checked:after:translate-x-full after:border-transparent rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-[#572E91]  after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-[#572E91]"></div>
-                                            </label>
-                                        </div>
-
+                                        <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Current Loan Terms</h3>
                                         <div className='grid grid-cols-2 gap-7 gap-y-4 my-7'>
                                             <FormikForm.Input name="remainingLoanBalance" placeholder='' label='Remaining Loan Balance' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Input name="monthlyPayment" placeholder='' label='Monthly Payment' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Input name="remainingNumberOfPayments" placeholder='' label='Remaining Number of Payments' styles='placeholder-[#00000066]  placeholder-sm' />
-                                            <FormikForm.Input name="currentInterestRate" perCentage={true} placeholder='' label='Current Interest Rate' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input name="currentInterestRate" placeholder='' label='Current Interest Rate' styles='placeholder-[#00000066]  placeholder-sm' />
                                         </div>
                                     </div>
 
                                     <div className='mt-11'>
-                                        <div className='flex justify-between items-center'>
-                                            <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Trade-in Vehicle</h3>
-                                            <label class="inline-flex items-center cursor-pointer">
-                                                <input type="checkbox" value="" class="sr-only peer" />
-                                                <div class="relative w-11 h-6 bg-[#E9D9FF80] peer-focus:outline-none border border-[#572E91] rounded-full peer peer-checked:after:-left-[0px] peer-checked:after:translate-x-full after:border-transparent rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-[#572E91]  after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-[#572E91]"></div>
-                                            </label>
-                                        </div>
+                                        <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Trade-in Vehicle</h3>
                                         <div className='grid grid-cols-2 gap-7 gap-y-4 mt-7'>
                                             <FormikForm.Input name="vin" placeholder='Enter your VIN' label='VIN' styles='placeholder-[#00000066]  placeholder-sm' />
                                         </div>

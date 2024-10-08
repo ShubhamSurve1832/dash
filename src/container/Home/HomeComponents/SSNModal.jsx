@@ -5,8 +5,17 @@ import { Form, Formik } from 'formik';
 import { FormikForm } from '@/components/FormikForm';
 import PrimaryBtn from '../../../components/UI/PrimaryBtn';
 import Cross from '@/images/icons/Cross';
+import { useRouter } from 'next/navigation';
+ 
 
-const SSNModal = ({ open, setOpen }) => {
+const SSNModal = ({ open, setOpen,setShowSsnModel, title }) => {
+  const router = useRouter();
+  const onSubmit = () => {
+    router.push("/personal");
+    setShowSsnModel(false)
+    setOpen(false)
+  };
+
   return (
     <>
       <Modal open={open} setOpen={setOpen}>
@@ -15,8 +24,9 @@ const SSNModal = ({ open, setOpen }) => {
             <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-auto w-full sm:max-w-lg">
               <div className="bg-white p-6">
                 <div className='flex justify-between items-center pb-4 border-b border-[#0000001A]'>
-                  <h3 className='text-2xl font-medium '>Identification</h3>
-                  <button className="text-sm font-semibold text-[#000000] hover:text-gray-900" onClick={() => setOpen(false)}>
+                  <h3 className='text-2xl font-medium '>{title ? title : "Identification"}</h3>
+                  <button className="text-sm font-semibold text-[#000000] hover:text-gray-900" onClick={() => { setOpen(false); setShowSsnModel(false); }}
+                  >
                     <Cross />
                   </button>
                 </div>
@@ -25,7 +35,7 @@ const SSNModal = ({ open, setOpen }) => {
                     enableReinitialize
                     initialValues={{ firstName: "", lastName: "", dateOfBirth: "", phoneNumber: "" }}
                   // validationSchema={dateSchema}
-                  // onSubmit={onSubmit}
+                  onSubmit={onSubmit}
                   >
                     {({ handleSubmit }) => {
                       return (

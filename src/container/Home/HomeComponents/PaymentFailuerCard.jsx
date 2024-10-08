@@ -5,7 +5,7 @@ const PaymentFailuerCard = () => {
     return (
         <div className='border-[#572E9133] border-[0.5px] rounded-[4px]'>
             <div className='bg-[#E9D9FF33] p-4'>
-                <h3 className='font-semibold text-2xl mr-8'>Peter <br />
+                <h3 className='font-semibold text-[26px] mr-8'>Peter <br />
                     Thompson
                 </h3>
                 <span className='text-[#00000080] mt-2 text-sm'>Id: 256</span>

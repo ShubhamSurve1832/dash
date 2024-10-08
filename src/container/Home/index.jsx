@@ -19,30 +19,31 @@ const Home = () => {
     <section className='mt-7'>
       <div className='grid gap-4 xl:grid-cols-5 grid-cols-4 items-start max-h-[85vh] hidden-scroller overflow-hidden' >
         <div className='grid gap-4 items-start'>
-          <TabHeader />
+          <TabHeader title='Queue' number='1' modal={true}/>
           <div className='p-[10px] bg-white hidden-scroller h-[65vh] overflow-auto rounded-[4px]'>
             <QueueCard />
           </div>
         </div>
         <div className='grid gap-4 items-start'>
-          <TabHeader />
+          <TabHeader title='Open' number='2'/>
           <div className='p-[10px] bg-white hidden-scroller h-[65vh] overflow-auto rounded-[4px]'>
             <OpenCard />
             <DateBtn date='27 August' />
             <PaymentFailuerCard />
           </div>
         </div>
-        <div className='grid gap-4 items-start'> <TabHeader />
+        <div className='grid gap-4 items-start'> <TabHeader title='Loan Option' number='1'/>
           <div className='p-[10px] bg-white hidden-scroller h-[65vh] overflow-auto rounded-[4px]'>
             <LoanCard />
           </div>
         </div>
-        <div className='grid gap-4 items-start'> <TabHeader />
+        <div className='grid gap-4 items-start'> <TabHeader title='Modification Request' number='2'/>
           <div className='p-[10px] bg-white hidden-scroller h-[65vh] overflow-auto rounded-[4px]'>
             <ModificationCard />
           </div>
         </div>
-        <div className='grid gap-4 items-start'> <TabHeader />
+        <div className='grid gap-4 items-start'>
+           <TabHeader title='Closed' number='2'/>
           <div className='p-[10px] bg-white hidden-scroller h-[65vh] overflow-auto rounded-[4px]'>
             <CloseCard />
             <CloseCard />

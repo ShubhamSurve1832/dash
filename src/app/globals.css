@@ -27,7 +27,7 @@
 }
 
 
-body { color: var(--foreground);background: var(--background);font-family: 'RobotoRegular';max-width: 1300px;margin-inline: auto;background-color: #F3F2F6; margin: 1.75rem; margin-inline: auto ;}
+body {font-family: 'RobotoRegular';max-width: 1300px;margin-inline: auto;background-color: #F3F2F6; margin: 1.75rem; margin-inline: auto ;}
 
 @layer utilities {
   .text-balance {
@@ -64,9 +64,6 @@ input , select{outline: none;}
 .slick-dots li button {  width: 12px !important;  height: 12px !important;}
 .slick-dots li{width: 12px !important; height: 12px !important;}
 .slick-dots li button:before {background: #572E911A !important;opacity: 1 !important;width: 12px !important;height: 12px !important;color: #a9170a00 !important;border-radius: 100%;}
-
 .slick-dots li button {  border-radius: 100%;  background-color: #572E911A !important;}
-
-input::placeholder {  background-color: #572E911A;  /* Placeholder background color */}
-
+input::placeholder {  background-color: #572E911A;}
 .slick-dots li.slick-active button {background-color: #572E91 !important;}

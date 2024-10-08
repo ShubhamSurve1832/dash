@@ -6,7 +6,7 @@ const LoanCard = () => {
         <div className=' rounded-[4px] mb-6 relative border-[0.5px] border-[#572E9133] '>
             <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-t-yellow-400 border-l-[40px] border-l-transparent"></div>
             <div className='bg-[#E9D9FF33] p-4'>
-                <h3 className='font-semibold text-2xl mr-12'>Dennis 
+                <h3 className='font-semibold text-[26px] mr-12'>Dennis 
                 Brown</h3>
                 <span className='text-[#00000080] mt-2 text-sm'>Id: 253</span>
             </div>
