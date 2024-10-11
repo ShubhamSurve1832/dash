@@ -5,16 +5,14 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import DownArrow from "@/images/icons/DownArrow";
+import Image from "next/image";
 import { Form, Formik } from "formik";
 import { personalVals } from "../../../config/constants/initialValues";
 import { FormikForm } from "@/components/FormikForm";
-import PrimaryBtn from "@/components/UI/PrimaryBtn";
-import CommentIcon from "@/images/icons/CommentIcon";
+import Equifax_logo from '../../../../public/images/equifax_logo.png'
+import DownArrow from "@/images/icons/DownArrow";
 import SaveIcon from "@/images/icons/SaveIcon";
 import CommentModal from "@/components/Shared/CommentModal";
-import Equifax_logo from '../../../../public/images/Equifax_logo.png'
-import Image from "next/image";
 import SecondaryBtn from "@/components/UI/SecondaryBtn";
 
 const CoApplicantTab = () => {
