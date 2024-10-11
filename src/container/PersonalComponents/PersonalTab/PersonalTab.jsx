@@ -10,13 +10,11 @@ import DownArrow from "@/images/icons/DownArrow";
 import { Form, Formik } from "formik";
 import { personalVals } from "../../../config/constants/initialValues";
 import { FormikForm } from "@/components/FormikForm";
-import CommentIcon from "@/images/icons/CommentIcon";
 import SaveIcon from "@/images/icons/SaveIcon";
 import CommentModal from "@/components/Shared/CommentModal";
 import DriverLicenseModal from "@/container/Home/HomeComponents/DriverLicenseModal";
 import SSNModal from "@/container/Home/HomeComponents/SSNModal";
-import Equifax_logo from '../../../../public/images/Equifax_logo.png'
-import PrimaryBtn from "@/components/UI/PrimaryBtn";
+import Equifax_logo from '../../../../public/images/equifax_logo.png'
 import SecondaryBtn from "@/components/UI/SecondaryBtn";
 
 const PersonalTab = () => {
