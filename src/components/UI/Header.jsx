@@ -16,13 +16,11 @@ import { NAVIGATION } from '@/config/constants';
 
 export const NotificationNumbers = ({ className, children }) => {
     return (
-
         <div className={` text-white flex justify-center items-center gap-2 absolute top-2 left-6 p-1 rounded-full w-[16px] h-[16px] text-[9px] ${className}`}> {children} </div>
-
     )
 }
 
-const Header = () => {
+const Header = () => { 
     return (
         <header className='p-6 flex justify-between items-center bg-[#fff] rounded-[4px]'>
             <div className='flex items-center gap-6'>
@@ -50,16 +48,13 @@ const Header = () => {
             <div className='flex justify-between gap-7 items-center'>
                 <div className='nav-rounded-btn !p-4 '>
                     <BulletedList />
-
                 </div>
                 <div className='flex justify-between items-center gap-3'>
-                    <Link href="/chat" className='test'>
-                        <div className='nav-rounded-btn relative'>
-                            <ChatIcon />
-                            <NotificationNumbers className='bg-[#5D6FFD]'>31</NotificationNumbers>
-                        </div>
-                    </Link>
-                    <div className='nav-rounded-btn relative test'>
+                    <div className='nav-rounded-btn relative'>
+                        <ChatIcon />                
+                        <NotificationNumbers className='bg-[#5D6FFD]'>3</NotificationNumbers>
+                    </div>
+                    <div className='nav-rounded-btn relative'>
                         <WarningIcon />
                         <NotificationNumbers className='bg-[#EC675E]'>13</NotificationNumbers>
                     </div>

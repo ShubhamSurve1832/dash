@@ -15,7 +15,7 @@ import Footer from "@/components/Shared/Footer";
 
 
 export default function RootLayout({ children }) {
-  const noHeaderRoutes = ['/chat', '/login'];
+  const noHeaderRoutes = ['/'];
   const pathname = usePathname();
   return (
     <html lang="en">

@@ -98,7 +98,7 @@ const DatePicker = (props) => {
             setFieldTouched(name, true);
             setFieldValue(name, date);
           }}
-          className="block w-full appearance-none rounded-md border placehoder:!font-light placeholder:text-[#00000066]  !border-[#CCCCCC]  p-2 "
+          className="block w-full appearance-none  rounded-md border placehoder:!font-light placeholder:text-[#00000066] placeholder:bg-transparent  !border-[#CCCCCC]  p-2 "
           dateFormat={dateFormat ? dateFormat : "dd/MM/yyyy"}
           disabled={disabled}
           autoComplete="off"

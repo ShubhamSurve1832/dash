@@ -9,14 +9,19 @@ import ListingCard from './ListingCard';
 import FilterIcon from '@/images/icons/FilterIcon';
 import SortIcon from '@/images/icons/SortIcon';
 import FilterModal from './FilterModal';
+import PrimaryBtn from '@/components/UI/PrimaryBtn';
 
-const VehicleListing = () => {
+const VehicleListing = ({setStep}) => {
     const [showFilter, setShowFilter] = useState(false)
+    const onSubmit = (values, { resetForm }) => {
+        console.log(values);
+        setStep(3)
+    }
     return (
         <>
             <div>
                 <div className='flex gap-4 mb-4'>
-                    <div className='flex justify-between items-center gap-2 p-3 border text-[#150C0B] border-[#572E91] rounded-md cursor-pointer' onClick={()=>setShowFilter(true)}>
+                    <div className='flex justify-between items-center gap-2 p-3 border text-[#150C0B] border-[#572E91] rounded-md cursor-pointer' onClick={() => setShowFilter(true)}>
                         <FilterIcon />
                         <p>Filter</p>
                     </div>
@@ -28,7 +33,7 @@ const VehicleListing = () => {
                 <Formik
                     initialValues={employmentVals}
                     // validationSchema={profileValidationSchema}
-                    // onSubmit={onSubmit}
+                    onSubmit={onSubmit}
                     enableReinitialize>
                     {({ handleSubmit }) => (
                         <Form onSubmit={handleSubmit}>
@@ -50,11 +55,12 @@ const VehicleListing = () => {
                                 <ListingCard />
                                 <ListingCard />
                             </div>
+                            <PrimaryBtn title="Search All Vehicles" className='w-full text-xl' />
                         </Form>
                     )}
                 </Formik>
                 {showFilter &&
-                <FilterModal open={showFilter} setOpen={setShowFilter} />
+                    <FilterModal open={showFilter} setOpen={setShowFilter} />
                 }
             </div>
         </>

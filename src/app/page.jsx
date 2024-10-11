@@ -1,9 +1,9 @@
-import Image from "next/image";
-import HomePage from "@/container/Home";
+
+import Login from "@/container/Login";
 export default function Home() {
   return (
     <>
-      <HomePage />
+      <Login/>
     </>
   );
 }

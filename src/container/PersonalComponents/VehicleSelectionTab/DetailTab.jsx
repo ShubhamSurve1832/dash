@@ -53,7 +53,7 @@ const DetailTab = () => {
               <FormikForm.Input name="vehicleCarryingCost" placeholder='' label='Vehicle Carrying Cost' styles='placeholder-[#00000066]  placeholder-sm' />
               <FormikForm.Input name="gapInsurance" placeholder='' label='GAP Insurance' styles='placeholder-[#00000066]  placeholder-sm' />
             </div>
-            <div className='mt-6'>
+            {/* <div className='mt-6'>
               <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Price Details</h3>
               <div className='my-4'>
                 <div className='flex my-2 gap-1 justify-between'>
@@ -78,7 +78,9 @@ const DetailTab = () => {
                 </div>
               </div>
               <PrimaryBtn className=" w-full text-xl mt-6" title="Select" onClick={() => setOpen(true)} />
-            </div>
+            </div> */}
+
+            <PrimaryBtn className=" w-full text-xl mt-6" title="Select" onClick={() => setOpen(true)} />
           </Form>
         )}
       </Formik>

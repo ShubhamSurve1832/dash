@@ -10,8 +10,7 @@ import PrimaryBtn from '@/components/UI/PrimaryBtn';
 const FinalChecklistTab = () => {
     return (
         <div className='p-4 bg-[#fff] rounded-[4px] mt-4'>
-            <Disclosure
-                as="div"
+            <Disclosure as="div" defaultOpen={true}
             >
                 <DisclosureButton className="p-3 group flex w-full items-center justify-between bg-[#F3F2F6]  rounded-[4px] tracking-[1px]">
                     <span className="text-xl font-semibold text-[#000000] group-data-[hover]:text-black/80">
