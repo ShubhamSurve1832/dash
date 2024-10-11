@@ -16,8 +16,7 @@ const AutoLoanTab = () => {
 
     return (
         <div className='p-4 bg-[#fff] rounded-[4px] mt-4'>
-            <Disclosure
-                as="div"
+            <Disclosure as="div" defaultOpen={true}
             >
                 <DisclosureButton className="p-3 group flex w-full items-center justify-between bg-[#F3F2F6]  rounded-[4px] tracking-[1px]">
                     <span className="text-xl font-semibold text-[#000000] group-data-[hover]:text-black/80">
@@ -45,8 +44,8 @@ const AutoLoanTab = () => {
                                     </div>
 
                                     <div className='mt-11'>
-                                        <div className='flex justify-between items-center'>
-                                            <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Current Loan Terms</h3>
+                                        <div className='flex justify-between items-center pb-4 border-b'>
+                                            <h3 className='text-[#000000B2] font-medium text-xl'>Current Loan Terms</h3>
                                             <label class="inline-flex items-center cursor-pointer">
                                                 <input type="checkbox" value="" class="sr-only peer" />
                                                 <div class="relative w-11 h-6 bg-[#E9D9FF80] peer-focus:outline-none border border-[#572E91] rounded-full peer peer-checked:after:-left-[0px] peer-checked:after:translate-x-full after:border-transparent rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-[#572E91]  after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-[#572E91]"></div>
@@ -62,8 +61,8 @@ const AutoLoanTab = () => {
                                     </div>
 
                                     <div className='mt-11'>
-                                        <div className='flex justify-between items-center'>
-                                            <h3 className='text-[#000000B2] font-medium text-xl pb-4 border-b'>Trade-in Vehicle</h3>
+                                        <div className='flex justify-between items-center pb-4 border-b'>
+                                            <h3 className='text-[#000000B2] font-medium text-xl'>Trade-in Vehicle</h3>
                                             <label class="inline-flex items-center cursor-pointer">
                                                 <input type="checkbox" value="" class="sr-only peer" />
                                                 <div class="relative w-11 h-6 bg-[#E9D9FF80] peer-focus:outline-none border border-[#572E91] rounded-full peer peer-checked:after:-left-[0px] peer-checked:after:translate-x-full after:border-transparent rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-[#572E91]  after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-[#572E91]"></div>
@@ -85,7 +84,7 @@ const AutoLoanTab = () => {
                                             <FormikForm.Input name="model" placeholder='Select model name' label='Model' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Input name="trim" placeholder='Enter trim' label='Trim' styles='placeholder-[#00000066]  placeholder-sm' />
                                             <FormikForm.Select label='Current Miles' name='currentMiles' />
-                                            <FormikForm.Input type='textarea' name="notesOnCarCondition" placeholder='Enter notes on car condition' inlineStyle='col-span-2' label='Notes on Car Condition' styles='placeholder-[#00000066]  placeholder-sm' />
+                                            <FormikForm.Input type='textarea' rows={5} name="notesOnCarCondition" placeholder='Enter notes on car condition' inlineStyle='col-span-2' label='Notes on Car Condition' styles='placeholder-[#00000066]  placeholder-sm' />
                                         </div>
                                     </div>
 

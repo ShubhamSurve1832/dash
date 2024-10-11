@@ -6,7 +6,7 @@ const formClasses =
     'block w-full rounded-md mt-1 block w-full rounded-md border !border-[#CCCCCC] p-2 outline-none placeholder:bg-white';
 
 const Input = (props) => {
-    const { name, placeholder, inlineStyle,perCentage, label, styles, type = 'text', onChange, disabled = false, required, ...rest } = props;
+    const { name, placeholder, inlineStyle,perCentage,rows, label, styles, type = 'text', onChange, disabled = false, required, ...rest } = props;
     const [field, meta] = useField(name);
     const { setFieldTouched, setFieldValue } = useFormikContext();
 
@@ -34,7 +34,7 @@ const Input = (props) => {
 
             {type === 'textarea' ? (
                 <textarea
-                    rows={4}
+                    rows={rows || "3"}
                     id={name + '-id'}
                     name={name}
                     {...field}

@@ -13,6 +13,7 @@ import ArrowDown from '@/images/icons/ArrowDown';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import Link from 'next/link';
 import { NAVIGATION } from '@/config/constants';
+import CarIcon from '@/images/icons/CarIcon';
 
 export const NotificationNumbers = ({ className, children }) => {
     return (
@@ -48,12 +49,17 @@ const Header = () => {
                 </Formik >
             </div>
             <div className='flex justify-between gap-7 items-center'>
-                <div className='nav-rounded-btn !p-4 '>
+                {/* <div className='nav-rounded-btn !p-4 '>
                     <BulletedList />
 
-                </div>
+                </div> */}
                 <div className='flex justify-between items-center gap-3'>
-                    <Link href="/chat" className='cursor-pointer'>
+                    <Link href='/inventory'>
+                        <div className='nav-rounded-btn relative'>
+                            <CarIcon />                            
+                        </div>
+                    </Link>
+                    <Link href='/chat'>
                         <div className='nav-rounded-btn relative'>
                             <ChatIcon />
                             <NotificationNumbers className='bg-[#5D6FFD]'>3</NotificationNumbers>

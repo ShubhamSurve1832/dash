@@ -14,7 +14,7 @@ const Login = () => {
 
   const onSubmit = () => {
     TOAST_SUCCESS("Login Success")
-    router.push("/");
+    router.push("/dashboard");
   };
 
   return (

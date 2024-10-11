@@ -1,4 +1,4 @@
-export const personalVals = {firstName: "Lauren",lastName: "Smith",email: "Lauren@email.com",mobileNumber: "+1 123 456-7890",dateOfBirth: "02/14/1995", ssn: "",driverLicenseNumber: "",driverLicenseState: "",streetAddress: "", city: "",  state:"", zipCode:""};
+export const personalVals = {firstName: "Lauren",lastName: "Smith",email: "Lauren@email.com",mobileNumber: "+1 123 456-7890",dateOfBirth: "02/14/1995", ssn: "",driverLicenseNumber: "",driverLicenseState: "",streetAddress: "", city: "",  state:"", zipCode:"" , note:""};
 
 export const loginState = { email: "customerrepresentative@ablcmotors.com",password: "ablcmotors@1234"}
 
@@ -13,3 +13,5 @@ export const vehicleSelectionVals = {options:"",serviceContract:"",warranty:"",v
 export const FinalChecklistVals ={singedLoan:"", carFax:"",}
 
 export const filterVals = {sunRoof:"",cruiseControl:"",fourWheelDrive:"",hillHoldControl:"",musicSystem:"",ventilatedSeats:""}
+
+export const sendDocVals ={firstName: "" , lastName:"", email:""  }

@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   Disclosure,
   DisclosureButton,
@@ -9,12 +10,14 @@ import DownArrow from "@/images/icons/DownArrow";
 import { Form, Formik } from "formik";
 import { personalVals } from "../../../config/constants/initialValues";
 import { FormikForm } from "@/components/FormikForm";
-import PrimaryBtn from "@/components/UI/PrimaryBtn";
 import CommentIcon from "@/images/icons/CommentIcon";
 import SaveIcon from "@/images/icons/SaveIcon";
 import CommentModal from "@/components/Shared/CommentModal";
 import DriverLicenseModal from "@/container/Home/HomeComponents/DriverLicenseModal";
 import SSNModal from "@/container/Home/HomeComponents/SSNModal";
+import Equifax_logo from '../../../../public/images/Equifax_logo.png'
+import PrimaryBtn from "@/components/UI/PrimaryBtn";
+import SecondaryBtn from "@/components/UI/SecondaryBtn";
 
 const PersonalTab = () => {
   const [initialValues, setInitialValues] = useState(personalVals);
@@ -173,127 +176,34 @@ const PersonalTab = () => {
                     </div>
                   </div>
                   {/* <PrimaryBtn title="Search All Vehicles" className='w-full text-xl' /> */}
+
+
+                  <div className="mt-11">
+                    <h3 className="text-[#000000B2] font-medium text-xl pb-4 border-b">
+                      Credit History
+                    </h3>
+                    <div className="border border-[#572E91] rounded-[4px] p-4 my-7">
+                      <Image src={Equifax_logo} width={90} height={30} alt="equifax logo" />
+                      <p className='text-[#572E91] text-xl font-semibold mt-6 border-b border-[#572E91] inline-block leading-[20px]'>View Equifax Credit Report</p>
+
+                    </div>
+                    <div className="my-6">
+                      <FormikForm.Input rows='6' type="textarea" name='note' label='Note' placeholder='Enter your notes' />
+                    </div>
+                  </div>
+
+                  <SecondaryBtn title="Submit" className="mt-6 py-4 px-10 bg-[#572E910D] text-xl" />
+                  <div className="mt-8">
+                    <p
+                      className="inline-block border-b border-[#572E91] text-[#572E91] font-semibold cursor-pointer"
+                      onClick={() => setOpen(true)}
+                    >
+                      + Add Co-applicant
+                    </p>
+                  </div>
                 </Form>
               )}
             </Formik>
-
-            <div className="mt-11">
-              <h3 className="text-[#000000B2] font-medium text-xl pb-4 border-b">
-                Credit History
-              </h3>
-              <div className="grid creadit-history-grid gap-7 gap-y-4 my-7">
-                <div>
-                  <div className="p-6 rounded-[4px] border border-[#00000033] relative">
-                    <div
-                      className="absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]"
-                      onClick={() => setOpenComment(true)}
-                    >
-                      <CommentIcon />
-                    </div>
-                    <h3 className="text-lg font-bold mb-6">Credit Score</h3>
-                    <p className="text-[#344BFD] font-bold text-4xl">700</p>
-                  </div>
-                  <div className="p-6 rounded-[4px] border border-[#00000033] mt-6 relative">
-                    <div className="absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]" onClick={() => setOpenComment(true)}>
-                      <CommentIcon />
-                    </div>
-                    <h3 className="text-lg font-bold mb-6">Credit Score</h3>
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="p-5 rounded-[4px] border border-[#00000033] text-center">
-                        <h4 className="text-sm font-semibold mb-6">
-                          Total Outstanding Loan
-                        </h4>
-                        <p className="text-[#F68D2B] font-bold text-4xl">
-                          $20,000
-                        </p>
-                      </div>
-                      <div className="p-5 rounded-[4px] border border-[#00000033] text-center">
-                        <h4 className="text-sm font-semibold mb-6">
-                          Minimum Payable Amount
-                        </h4>
-                        <p className="text-[#F68D2B] font-bold text-4xl">
-                          $ 750
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6 rounded-[4px] border-[0.5px] text-center border-[#00000033] mt-6 relative">
-                    <div
-                      className="absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]"
-                      onClick={() => setOpenComment(true)}
-                    >
-                      <CommentIcon />
-                    </div>
-                    <h3 className="text-lg font-bold mb-6">
-                      Risk Balancing Percentage
-                    </h3>
-                    <div className="grid grid-cols-3 gap-6">
-                      <div className="p-5 rounded-[4px] border-[0.5px] text-center border-[#00000033]">
-                        <h4 className="text-base font-bold text-[#666666] mb-2">
-                          Min
-                        </h4>
-                        <p className="text-[#288827] font-bold text-4xl">3%</p>
-                      </div>
-                      <div className="p-5 rounded-[4px] border-[0.5px] text-center border-[#00000033]">
-                        <h4 className="text-base font-bold text-[#666666] mb-2">
-                          Median
-                        </h4>
-                        <p className="text-[#288827] font-bold text-4xl">5%</p>
-                      </div>
-                      <div className="p-5 rounded-[4px] border-[0.5px] text-center border-[#00000033]">
-                        <h4 className="text-base font-bold text-[#666666] mb-2">
-                          Max
-                        </h4>
-                        <p className="text-[#288827] font-bold text-4xl">7%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6 rounded-[4px] border border-[#00000033] relative">
-                  <div
-                    className="absolute right-0 top-0 p-2 rounded-bl-xl bg-[#572E910D]"
-                    onClick={() => setOpenComment(true)}
-                  >
-                    <CommentIcon />
-                  </div>
-                  <h3 className="text-lg font-bold mb-6">Credit Mix</h3>
-                  <div className="bg-[#00000008] rounded-sm p-4">
-                    <div className="flex gap-2 items-center pb-2 border-b-[0.5px] border-[#00000033]">
-                      <span className="bg-[#49A677] w-2 h-2 rounded-full"></span>
-                      <h3 className="font-bold">Education Summary</h3>
-                    </div>
-                    <div className="pt-4">
-                      <div className="flex justify-between font-semibold text-sm pb-4">
-                        <p>Outstanding Balance</p>
-                        <p>$ 10,000</p>
-                      </div>
-                      <div className="flex justify-between font-semibold text-sm pb-4">
-                        <p>Principal </p>
-                        <p>$ 100</p>
-                      </div>
-                      <div className="flex justify-between font-semibold text-sm pb-4">
-                        <p>Interest</p>
-                        <p>$ 200</p>
-                      </div>
-                    </div>
-                    <div className="pt-4 border-t-[0.5px] border-[#00000033]">
-                      <div className="flex justify-between font-semibold text-sm">
-                        <p>Total Payment</p>
-                        <p>$ 300</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p
-                className="inline-block border-b border-[#572E91] text-[#572E91] font-semibold cursor-pointer"
-                onClick={() => setOpen(true)}
-              >
-                + Add Co-applicant
-              </p>
-            </div>
           </div>
         </DisclosurePanel>
       </Disclosure>
